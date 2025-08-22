@@ -44,7 +44,7 @@ class ProdukWebController extends Controller
     {
         $request->validate([
             'nama' => 'required|string|max:255',
-            'kategori_id' => 'required|exists:kategoris,id',
+            'kategori_id' => 'required|exists:kategori,id',
             'harga' => 'required|numeric|min:0',
             'deskripsi' => 'nullable|string',
         ]);
@@ -79,7 +79,7 @@ class ProdukWebController extends Controller
     {
         $request->validate([
             'nama' => 'required|string|max:255',
-            'kategori_id' => 'required|exists:kategoris,id',
+            'kategori_id' => 'required|exists:kategori,id',
             'harga' => 'required|numeric|min:0',
             'deskripsi' => 'nullable|string',
         ]);
